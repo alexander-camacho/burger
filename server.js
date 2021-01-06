@@ -1,7 +1,6 @@
 // Dependencies
 const express = require("express");
 const exphbs = require("express-handlebars");
-const mysql = require("mysql");
 
 // Create an instance of the express app.
 const app = express();
@@ -19,13 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
 
-const connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "password",
-    database: "task_saver_db"
-});
+
 
 app.get('/', (req, res) =>
     res.render('index', { serverData: 'this is data' })
