@@ -5,7 +5,6 @@ const connection = require("../config/connection.js");
 const orm = {
 
     selectAll: function (table, cb) {
-        console.log(cb)
         const queryString = `SELECT * FROM ${table};`;
         connection.query(queryString, (err, result) => {
             if (err) throw err
