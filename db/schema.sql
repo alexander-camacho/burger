@@ -1,4 +1,6 @@
 -- Create initial burgers database
+DROP DATABASE IF EXISTS burgers_db;
+
 CREATE DATABASE burgers_db;
 
 -- Use the db
